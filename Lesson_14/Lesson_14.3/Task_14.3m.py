@@ -1,0 +1,20 @@
+import turtle
+turtle.speed(0)
+a = int(input('Введите длину стороны знака:'))
+turtle.pensize(4)
+for i in range(8):
+  turtle.forward(a)
+  turtle.left(45)
+turtle.fillcolor('red')
+turtle.penup()
+turtle.goto(a*0.05,a*0.12)
+turtle.begin_fill()
+for i in range(8):
+  turtle.forward(a-a*0.1)
+  turtle.left(45)
+turtle.end_fill()
+turtle.goto(a*0.5, a)
+turtle.fillcolor('white')
+turtle.begin_fill()
+turtle.write('STOP', align='center', font=('Arial',a/2,'normal'))
+turtle.end_fill()
